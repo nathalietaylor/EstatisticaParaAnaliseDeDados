@@ -1,0 +1,77 @@
+Fundamentos de Estatística para análise de dados
+
+
+29/04
+
+modelagem + processo de aplicação do conhecimento fundamental ou experimental para simular ou descrever o o omportamneto de um sistema real 
+
+classificação dos modelos:
+segundo forma matematica: deterministico ou problabilistico, estaatico ou dinamico; segundo representação de dados: continuo ou discreto, pontual ou distribuido
+
+dados brutos desordenados = rol de dados
+
+medidas de posição: média, mediana, moda, mínimo e máximo
+medidas de dispersão: amplitude, desvio padrao, variancia, coeficiente de variancia, coeficiente de variacao, coeficiente assimetria
+
+outlier = numeros muito fora dos outros resultados; considerar outliar para media, mediana e variancia?
+
+correlacao nao implica necessariamente em causalidade
+
+Tratamento dos dados da tabela para criação de banco de dados:
+1) deixar apenas uma linha para descrição dos atributos;
+2) tirar demais caracteres como $ por exemplo (botao direito > formatar celulas> geral)
+3) calcular o necessário, exemplo, IR e salario líquido
+4) abreviar nomes longos que possão atrapalhar criação de graficos (localizar > substituir)
+5) separar nome e sobrenome ( aba dados> texto para colunas *criar uma coluna a mais antes)
+6) gravar como planilha de texto puro = csv ( salvar como > mais opções> CSV UTblabla bla 8)
+
+ se abrir como wordpad, lembrar de salvar como texto
+
+06/05
+
+objetos, casos e instancias
+
+objetos sao do mundo real, cada objeto tem um grupo de variaveis que podem ser medidas - ex: meu carro é azul, tem 2 portas, 5 passageiros
+
+escalas 
+nominal: valores nao numericos e nao ordenados, duas instancias apresentam ou nao o mesmo valor, qualitativa
+ordinal: valores não numericos e ordenados, uma intanccia pode apreesentar um valor comparativo maior que a outra, qualitativa - ex: grau de instrução
+intervalar: valores numericos, com nao apenas ordem entre valores, mas tbm diferença entre valores. o zero é relativo, quanti - ex: temperatura em graus celsius
+proporcional: valores numericos, alem da diferença, tem sentido calcular a proporção entre valores, o zero é absoluto, quanti - ex: peso, altura, tempo, distancia, idade
+
+cardinalidade dos atributos das variaveis = quanti ou quali
+
+variáveis dicotomicas: ex: sexo(M,F)
+variáveis binárias: 0, 1
+variaveis discretas: tem conjunto de valor finito de valores distintos - ex: nº de departamento, nº de filhos
+variaveis continuas: podem assumir qualquer valor dentro de um intervalo - ex: peso, altura
+
+valor ausente: n/a
+valor inaplicavel: sexo masculino, numero de partos = null; sexo feminino, numero de partos = 0
+
+principais etapas na preparação de dados
+limpeza de dados, integracao de dados, 
+
+
+teste de normalidade 
+Shapiro-Wilk:
+para que a distribuicao seja normal, p valor é alto (hipotese de nulidade)
+se p valor baixo, não normal (hipotese alternativa)
+de  0 a -1 (correlacao negativa)/ 1 (correlacao positiva)
+se p valor >0,05: H0 valida, 
+se p valor <0,05: Ha valida
+
+dependendo se os dados são normais ou não, determinadas analises podem ser usadas ou não
+
+Grafico Q-Q:
+faz o grafico com os valores dos quartis, se todos os pontos ficam sobre a reta, grafico normal
+
+intervalo de confiança
+ex: 95% - 95% dos IR estão dentro destes valores, probabilistico,  possível gerar previsoes
+
+para eliminar um outlier, intervalo de confiança em 99% (paramentro para eliminação)
+
+-----------------------------------------------------------
+exemplo criar variavel de ano a partir de data de contrato
+ clicar duas vezes em coluna vazia > variavel calculada > funcoes > texto > split = SPLIT (coluna original, 'separador', parte que quer usar) - split (contrato, '/', 3)
+
